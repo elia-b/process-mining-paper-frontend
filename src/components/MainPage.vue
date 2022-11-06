@@ -53,7 +53,7 @@ export default {
 
 .panel {
     min-width: 60px;
-    background-color: grey;
+    background-color: #f3f3f3;
     flex-direction: column;
     display: flex;
     padding: 10px 10px 10px 10px;

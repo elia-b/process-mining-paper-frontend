@@ -59,7 +59,8 @@ export default {
       clicks: 0,
       timer: null,
       cleanGraph: true,
-      colorList: ["red", "blue", "pink", "yellow", "green", "orange", "purple"],
+      colorList: ["red", "blue", "pink", "green", "orange", "purple", "blueviolet", "brown", "burlywood", "chocolate", "crimson", "cornflowerblue",
+      "coral", "lime", "navy", "darkcyan", "darkslateblue", "thistle"],
 
     }
   },
@@ -76,22 +77,16 @@ export default {
     showCleanGraph() {
       this.trueGraph = false
       this.cleanGraph = true
-      this.svgElementsToRemoveClean = []
-      this.svgElementsToRemoveHistory = []
       this.getGraph('clean-graph',this.$backend.getGraph())
     },
     showHistoryGraph() {
       this.trueGraph = false
       this.cleanGraph = false
-      this.svgElementsToRemoveClean = []
-      this.svgElementsToRemoveHistory = []
       this.getGraph('history-view',this.$backend.getHistoryGraph())
     },
     showTrueGraph() {
       this.trueGraph = true
       this.cleanGraph = true
-      this.svgElementsToRemoveClean = []
-      this.svgElementsToRemoveHistory = []
       this.getGraph('true-view',this.$backend.getTrueGraph())
     },
     getGraph(svg_id,fetch_from) {
@@ -539,7 +534,7 @@ export default {
 <style>
 .newpanel {
   min-width: 80px;
-  background-color: rgb(103, 146, 93);
+  background-color: #009879;
   display: flex;
   flex-direction: column;
 

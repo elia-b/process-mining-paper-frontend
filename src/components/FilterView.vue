@@ -118,7 +118,7 @@ export default {
   width: 20%;
   flex-direction: column;
   display: flex;
-  background-color: aquamarine;
+  background-color: #009879;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   padding: 8px;
 
