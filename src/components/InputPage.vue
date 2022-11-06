@@ -6,6 +6,9 @@
         <tr>
           <td><label> CSV File </label></td>
           <td><input type="file" accept=".csv" @change="handleFileUpload( $event )" /></td>
+          <td>
+            <input type="button" onclick="location.href='https://drive.google.com/file/d/1CCgKSmgcmX3Egx_rYOmZ6iNe5ite77bm/view?usp=sharing.';" value="Get an example file" />
+          </td>
         </tr>
 
         <tr>
@@ -65,11 +68,12 @@ export default {
         file: "",
         content: [],
         parsed: false
+        
       }
     }
   },
   methods: {
-    
+
     parseFile() {
       Papa.parse(this.form.file, {
         header: true,
