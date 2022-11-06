@@ -77,16 +77,22 @@ export default {
     showCleanGraph() {
       this.trueGraph = false
       this.cleanGraph = true
+      this.svgElementsToRemoveClean = []
+      this.svgElementsToRemoveHistory = []
       this.getGraph('clean-graph',this.$backend.getGraph())
     },
     showHistoryGraph() {
       this.trueGraph = false
       this.cleanGraph = false
+      this.svgElementsToRemoveClean = []
+      this.svgElementsToRemoveHistory = []
       this.getGraph('history-view',this.$backend.getHistoryGraph())
     },
     showTrueGraph() {
       this.trueGraph = true
       this.cleanGraph = true
+      this.svgElementsToRemoveClean = []
+      this.svgElementsToRemoveHistory = []
       this.getGraph('true-view',this.$backend.getTrueGraph())
     },
     getGraph(svg_id,fetch_from) {
