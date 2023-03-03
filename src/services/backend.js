@@ -1,7 +1,7 @@
 export default class Backend{
 
     constructor(){
-        this.url = "https://process-mining-paper-backend-production.up.railway.app"
+        this.url = "http://localhost:5000"
     }
 
     getUrlData(){
